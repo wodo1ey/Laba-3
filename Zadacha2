@@ -1,0 +1,18 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+using namespace std;
+
+void main()
+{
+	srand(time(NULL));
+	int x, min = 1, max = 20;
+	setlocale(LC_ALL, "Russian");
+	cout << "Сейчас программа сгенерирует 20 случайных чисел от 1 до 20 и выведет количество символов \"*\" равное полученному числу." << "\n";
+	for (int i = 1; i <= 20; i++) {
+		x = min + rand() % (max - min + 1);
+		string line(x, '*');
+		cout << line << "\n";
+	}
+	cout << "Числа были успешно сгенерированы. Полученный результут можно увидеть выше.";
+}
