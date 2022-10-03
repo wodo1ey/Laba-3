@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	int n, x;
+	cin >> n;
+	while (n > 0) {
+		x = n % 10;
+		n = n / 10;
+		cout << x;
+	}
+}
